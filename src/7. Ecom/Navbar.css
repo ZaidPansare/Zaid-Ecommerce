@@ -1,0 +1,79 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navecom{
+    background-color: black;
+    height: auto;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Artbtn{
+    display: flex;
+    justify-content: center;
+}
+
+.navdiv input{
+    width: 500px;
+    height: 40px;
+    border-radius: 30px;
+}
+.navdiv img{
+    background-color: black;
+    height: 45px;
+    width: 150px;
+    margin-top: 20px;
+}
+
+.navart{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navecom input{
+    outline: none;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+
+.Artbtn button{
+    padding: 10px 20px;
+    background-color: rgb(253, 207, 2);
+    font-weight: bold;
+}
+
+@media screen and (max-width:650px) {
+    .navecom{
+        width: 100%;
+    }
+    .navart{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .navdiv input{
+        width: 250px;
+    }
+    .Artbtn button{
+        height: 40px;
+        font-size: 10px;
+        width: 80px;
+        padding: 2px 2px;
+    }
+}

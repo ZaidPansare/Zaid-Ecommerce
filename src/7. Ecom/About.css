@@ -1,0 +1,40 @@
+/* .About{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+} */
+
+.bot{
+    width: 60%;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 30px;
+}
+.mainitem{
+    display: flex;
+    justify-content: space-around;
+}
+.moreitems{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+@media screen and (max-width:1105px){
+    .About{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .bot{
+        width: 320px;
+        font-size: 10px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .top{
+        height:400px;
+        width: 400px;
+        margin-top: 30px;
+    }
+}

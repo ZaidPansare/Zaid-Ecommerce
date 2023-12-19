@@ -1,0 +1,49 @@
+table{
+    /* border: 1px solid black; */
+    padding: 20px;
+    width: 90%;
+}
+
+.main{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:730px){
+    table{
+        font-size: 10px;
+        width: 300px;
+    }
+    #abtbtn button{
+        font-size: 10px;
+    }
+    #del button{
+        font-size: 10px;
+    }
+    #gpay{
+        font-size: 10px;
+        width: 20px;
+    }
+}
+@media screen and (max-width:425px){
+    table{
+        font-size: 10px;
+        width: 300px;
+    }
+    #abtbtnimg{
+        width: 20px;
+        height: 20px;
+    }
+    #abtbtn button{
+        font-size: 5px;
+    }
+    #del button{
+        font-size: 5px;
+    }
+    #gpay{
+        font-size: 10px;
+        width: 20px;
+    }
+}
