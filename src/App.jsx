@@ -1,34 +1,34 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from './7. Ecom/Home'
+import Cart from './7. Ecom/Cart'
+import Navbar from './7. Ecom/Navbar'
+import About from './7. Ecom/About'
+import Data from './7. Ecom/Data'
+import Cover from './7. Ecom/Cover'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+const App = () => {
+  const [data,setData]= useState(Data)
+  const [search,setSearch] = useState("")
+  const [cart, setCart] = useState([])
+
+  function handleClick(item){
+    setCart([...cart,item])
+  }
+
+  return (  
+    <div>
+        <BrowserRouter>
+        <Navbar setSearch={setSearch} size={cart.length} data={data} setData={setData}/>
+        <Routes>
+            <Route path='/' element={<Home data={data} search={search} handleClick={handleClick}/>} ></Route>
+            <Route path='/cart' element={<Cart cart={cart} setCart={setCart}/>}></Route>
+            <Route path='/about/:Id' element={<About Data={Data} handleClick={handleClick}/>}/>
+            <Route path='/cover' element={<Cover/>}></Route>
+        </Routes>
+        </BrowserRouter>
+    </div>
   )
 }
 
